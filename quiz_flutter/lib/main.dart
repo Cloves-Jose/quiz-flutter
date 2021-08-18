@@ -21,13 +21,13 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  var perguntaSelecionada = 0;
+  var _perguntaSelecionada = 0;
 
-  void responder() {
+  void _responder() {
     setState(() {
-      perguntaSelecionada++;
+      _perguntaSelecionada++;
     });
-    print(perguntaSelecionada);
+    print(_perguntaSelecionada);
   }
 
   @override
@@ -45,10 +45,10 @@ class _AppState extends State<App> {
       body: Center(
         child: Column(
           children: <Widget>[
-            Text(perguntas[perguntaSelecionada]),
-            ElevatedButton(onPressed: responder, child: Text('Resposta 1')),
-            ElevatedButton(onPressed: responder, child: Text('Resposta 2')),
-            ElevatedButton(onPressed: responder, child: Text('Resposta 3'))
+            Text(perguntas[_perguntaSelecionada]),
+            ElevatedButton(onPressed: _responder, child: Text('Resposta 1')),
+            ElevatedButton(onPressed: _responder, child: Text('Resposta 2')),
+            ElevatedButton(onPressed: _responder, child: Text('Resposta 3'))
           ],
           mainAxisAlignment: MainAxisAlignment.center,
         ),
